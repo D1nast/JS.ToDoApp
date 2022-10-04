@@ -14,10 +14,16 @@ const onClickAdd = () => {
   //完了ボタン
   const completeButton = document.createElement("button");
   completeButton.innerText = "完了";
+  completeButton.addEventListener("click", () => {
+    alert("完了");
+  });
   //削除ボタン
   const deleteButton = document.createElement("button");
   deleteButton.innerText = "削除";
-
+  deleteButton.addEventListener("click", () => {
+    const deleteTarget = deleteButton.parentNode;
+    document.getElementById("incomplete-list").removeChild(deleteTarget);
+  });
   //divの子要素を作成
   div.appendChild(li);
   div.appendChild(completeButton);
