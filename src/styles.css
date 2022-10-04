@@ -21,7 +21,7 @@ li {
 }
 .input-area {
   background-color: #cf4444;
-  width: 100%;
+  width: 400px;
   height: 30px;
   padding: 8px;
   margin: 8px;
@@ -29,7 +29,7 @@ li {
 }
 .incomplete-area {
   background-color: aqua;
-  width: 100%;
+  width: 400px;
   min-height: 200px;
   padding: 8px;
   margin: 8px;
@@ -37,7 +37,7 @@ li {
 }
 .complete-area {
   background-color: rosybrown;
-  width: 100%;
+  width: 400px;
   min-height: 200px;
   padding: 8px;
   margin: 8px;
