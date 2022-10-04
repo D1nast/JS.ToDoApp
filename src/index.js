@@ -1,5 +1,3 @@
-import "./styles.css";
-
 const onClickAdd = () => {
   //入力欄をクリア
   const inputText = document.getElementById("add-text").value;
