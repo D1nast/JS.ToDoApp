@@ -1,12 +1,22 @@
 const onClickAdd = () => {
-  //入力欄をクリア
+  //Todoリストを追加する処理
   const inputText = document.getElementById("add-text").value;
   document.getElementById("add-text").value = "";
-
   createIncompleteList(inputText);
 };
+/////////////////////////////
+// JSでTodoリストに追加するHTML /
+// <div class=list-row>     /
+//   <li>To Do</li>         /
+//   <button>完了</button>   /
+//   <button>削除</button>   /
+// </div>                   /
+/////////////////////////////
 
-//未完了リストから完了リストへ
+//未完了リストから削除する関数
+//引数"target"はこの未完了リストから削除する機能を沢山使うので便宜的に設定
+//【例】deleteFromIncompletelist(completeButton.parentNode);
+//完了ボタンの親要素list-rowの子要素全てを削除する(li,button)
 const deleteFromIncompletelist = (target) => {
   document.getElementById("incomplete-list").removeChild(target);
 };
