@@ -1,5 +1,6 @@
 const onClickAdd = () => {
-  //Todoリストを追加する処理
+  //入力した値をTodoリストに追加するための処理
+  //createIncompleteListはTodoリストを作成する処理
   const inputText = document.getElementById("add-text").value;
   document.getElementById("add-text").value = "";
   createIncompleteList(inputText);
@@ -22,6 +23,10 @@ const deleteFromIncompletelist = (target) => {
 };
 
 //未完了リストに追加する関数
+//(text)として入れた値がこの処理内でtextとして扱われる
+//【例】createIncompleteList("あ");
+//この場合は、textは文字列の「あ」になる
+//li.innnerText=textは「あ」
 const createIncompleteList = (text) => {
   //div生成
   const div = document.createElement("div");
@@ -30,17 +35,25 @@ const createIncompleteList = (text) => {
   const li = document.createElement("li");
   li.innerText = text;
 
-  //完了ボタン
+  //完了ボタンの作成
   const completeButton = document.createElement("button");
   completeButton.innerText = "完了";
+  //完了ボタン押した時の処理
+  //{}は４３～６９行目まで関数処理
+  //作成したli.innnerText等は位置が指定されていないため、
+  //最後のappendchildで位置
   completeButton.addEventListener("click", () => {
     deleteFromIncompletelist(completeButton.parentNode);
     //完了リストに追加
+    //firstElementChildは親要素の下にある最初の子要素（li）
     const addTarget = completeButton.parentNode;
     const text = addTarget.firstElementChild.innerText;
     addTarget.textContent = null;
     const li = document.createElement("li");
     li.innerText = text;
+
+    //戻すボタン
+    //div以下の要素を除去・liの値を取得して未完了リストを再作成する
     const backButton = document.createElement("button");
     backButton.innerText = "戻す";
     backButton.addEventListener("click", () => {
