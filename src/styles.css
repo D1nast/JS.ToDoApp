@@ -1,5 +1,6 @@
 body {
   font-family: sans-serif;
+  background-color: rgb(240, 230, 230);
 }
 input {
   border-radius: 8px;
@@ -13,14 +14,14 @@ button {
   padding: 4px 16px;
 }
 button:hover {
-  background-color: pink;
   cursor: pointer;
+  background-color: rgb(205, 111, 127);
 }
 li {
   margin-right: 8px;
 }
 .input-area {
-  background-color: #cf4444;
+  background-color: rgb(207, 148, 158);
   width: 400px;
   height: 30px;
   padding: 8px;
@@ -28,7 +29,7 @@ li {
   border-radius: 8px;
 }
 .incomplete-area {
-  background-color: aqua;
+  background-color: rgb(207, 148, 158);
   width: 400px;
   min-height: 200px;
   padding: 8px;
@@ -36,7 +37,7 @@ li {
   border-radius: 8px;
 }
 .complete-area {
-  background-color: rosybrown;
+  background-color: rgb(207, 148, 158);
   width: 400px;
   min-height: 200px;
   padding: 8px;
